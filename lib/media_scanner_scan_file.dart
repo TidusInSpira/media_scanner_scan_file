@@ -11,6 +11,6 @@ class MediaScannerScanFile {
     final result = await _channel.invokeMethod('scan', <String, dynamic>{
       'fileUri' : fileUri,
     });
-    return result;
+    return Map<String, dynamic>.from(result);
   }
 }
